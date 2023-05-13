@@ -1,6 +1,7 @@
 package com.devsuperior.dslist.dto;
 
 import com.devsuperior.dslist.entities.Game;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.Column;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -9,14 +10,24 @@ import org.springframework.beans.BeanUtils;
 
 public class GameDTO {
 
+
+    @JsonProperty("codigo_game")
     private Long id;
+    @JsonProperty("titulo")
     private String title;
+    @JsonProperty("ano")
     private Integer year;
+    @JsonProperty("genero")
     private String genre;
+    @JsonProperty("plataforma")
     private String platforms;
+    @JsonProperty("pontuacao")
     private Double score;
+    @JsonProperty("imagem_url")
     private String imgUrl;
+    @JsonProperty("descricao_curta")
     private String shortDescription;
+    @JsonProperty("descricao_completa")
     private String longDescription;
 
     public GameDTO() {

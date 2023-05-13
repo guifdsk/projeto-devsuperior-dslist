@@ -30,4 +30,12 @@ public class GameService {
                 .filter(x -> x.getYear() == 2012)
                 .toList();
     }
+
+    @Transactional(readOnly = true)
+    public List<GameMinDTO> findByList(Long idList){
+        var result = repository.searchByList(idList);
+        return result.stream()
+                .map(x -> new GameMinDTO(x))
+                .toList();
+    }
 }
