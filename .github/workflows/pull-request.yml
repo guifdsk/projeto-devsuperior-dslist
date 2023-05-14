@@ -13,22 +13,9 @@ jobs:
       with:
         ref: my-branch
         destination_branch: "development"
-        pr_title: "Pulling $GITHUB_ACTION_REPOSITORY into development by ${{ github.actor }}"
+        pr_title: "Pull Request from ${{github.ref_name}} into development by ${{github.actor}}"
         pr_body: |                                    
           :crown: *An automated PR*
           - Updated with *today's* date
-          ${{ github.ref_name }}
-          ${{ github.action }}
-          ${{ github.action_path }}
-          ${{ github.action_repository }}
-          ${{ github.actor }}
-          ${{ github.actor_id }}
-          ${{ github.base_ref }}
-          ${{ github.event}}
-          ${{ github.event_name }}
-          ${{ github.event_path }}
-          ${{ github.path }}
-          ${{ github.ref }}
-          ${{ github.ref_name}}
-          ${{ github.ref_type }}
-          ${{ github.repository }}
+
+          [${{github.event.number}}]
