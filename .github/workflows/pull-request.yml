@@ -17,20 +17,18 @@ jobs:
         pr_body: |                                    
           :crown: *An automated PR*
           - Updated with *today's* date
-          ${{ github.workflow }}
-          ${{ github.run.id }}
-          ${{ github.run.number }}
+          ${{ github.ref_name }}
           ${{ github.action }}
-          ${{ github.actions }}
+          ${{ github.action_path }}
+          ${{ github.action_repository }}
           ${{ github.actor }}
-          ${{ github.repository }}
-          ${{ github.event.name }}
-          ${{ github.event.path }}
-          ${{ github.workspace }}
-          ${{ github.sha }}
+          ${{ github.actor_id }}
+          ${{ github.base_ref }}
+          ${{ github.event}}
+          ${{ github.event_name }}
+          ${{ github.event_path }}
+          ${{ github.path }}
           ${{ github.ref }}
-          ${{ github.head.ref }}
-          ${{ github.base.ref }}
-          ${{ github.server.url }}
-          ${{ github.api.url }}
-          ${{ github.graphql.url }}
+          ${{ github.ref_name}}
+          ${{ github.ref_type }}
+          ${{ github.repository }}
