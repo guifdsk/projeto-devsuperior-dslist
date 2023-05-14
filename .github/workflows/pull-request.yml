@@ -16,3 +16,4 @@ jobs:
         destination_branch: "development"
         pr_title: "Pulling ${{ github.ref }} into main"
         pr_body: "👑 *An automated PR*"
+        github_token: ${{ secrets.GITHUB_TOKEN }}
