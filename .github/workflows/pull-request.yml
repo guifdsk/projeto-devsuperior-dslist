@@ -5,15 +5,11 @@ on:
 
 jobs:
   pull-request:
-    name: Open PR 
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-      name: checkout
-    - uses: repo-sync/pull-request@v2
-      name: pull-request
+    - name: pull-request
+      uses: docker://ghcr.io/repo-sync/pull-request:v2
       with:
-        destination_branch: "development"
-        pr_title: "Pulling ${{ github.ref }} into main"
-        pr_body: "👑 *An automated PR*"
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        destination_branch: "main"
+        github_token: ${{ secrets.GITHUB_TOKEN }} 
