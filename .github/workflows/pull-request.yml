@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - 'feature/**'
+      - 'feature/*'
 
 jobs:
   pull-request:
@@ -12,4 +12,3 @@ jobs:
       uses: repo-sync/pull-request@v2
       with:
         destination_branch: "development"
-        pr_title: "Pulling into development"
