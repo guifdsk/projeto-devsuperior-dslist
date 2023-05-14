@@ -4,7 +4,7 @@ on:
       - 'feature/**'
 
 jobs:
-  pull-request:
+  Open Pull Request:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
@@ -15,12 +15,6 @@ jobs:
         destination_branch: "development"
         pr_title: "Pull Request from ${{github.ref_name}} into development by ${{github.actor}}"
         pr_body: |                                    
-          :crown: *An automated PR*
-          - Updated with *today's* date
+          :crown: *Pull Request criado automaticamente*
 
-          ${{ github.event.number }}
-          [${{ github.event.number }}]
-          ${{ github.event.issue.number }}
-          ${{ github.event.id }}
-          ${{ github.event.actor.avatar_url }}
-          ${{ github.number }}
+          Faça as revisões necessárias e em seguida realize o merge.
