@@ -11,4 +11,4 @@ jobs:
     - name: pull-request
       uses: repo-sync/pull-request@v2
       with:
-        destination_branch: "main"
+        destination_branch: main
