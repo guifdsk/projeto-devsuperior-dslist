@@ -11,4 +11,5 @@ jobs:
     - name: pull-request
       uses: repo-sync/pull-request@v2
       with:
+        ref: my-branch
         destination_branch: "development"
