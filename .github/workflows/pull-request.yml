@@ -4,7 +4,7 @@ on:
       - 'feature/**'
 
 jobs:
-  Open Pull Request:
+  open-pull-request:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
