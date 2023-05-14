@@ -18,4 +18,9 @@ jobs:
           :crown: *An automated PR*
           - Updated with *today's* date
 
-          [${{github.event.number}}]
+          ${{ github.event.number }}
+          [${{ github.event.number }}]
+          ${{ github.event.issue.number }}
+          ${{ github.event.id }}
+          ${{ github.event.actor.avatar_url }}
+          ${{ github.number }}
