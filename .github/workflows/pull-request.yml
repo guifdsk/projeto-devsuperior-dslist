@@ -17,7 +17,6 @@ jobs:
         pr_body: |                                    
           :crown: *An automated PR*
           - Updated with *today's* date
-          ${{ ci }}
           ${{ github_workflow }}
           ${{ github_run_id }}
           ${{ github_run_number }}
