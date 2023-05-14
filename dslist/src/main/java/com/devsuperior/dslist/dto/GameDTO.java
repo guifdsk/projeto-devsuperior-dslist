@@ -16,7 +16,7 @@ public class GameDTO {
     @JsonProperty("titulo")
     private String title;
     @JsonProperty("ano")
-    private Integer year;
+    private Integer gameYear;
     @JsonProperty("genero")
     private String genre;
     @JsonProperty("plataforma")
@@ -53,12 +53,12 @@ public class GameDTO {
         this.title = title;
     }
 
-    public Integer getYear() {
-        return year;
+    public Integer getGameYear() {
+        return gameYear;
     }
 
-    public void setYear(Integer year) {
-        this.year = year;
+    public void setGameYear(Integer gameYear) {
+        this.gameYear = gameYear;
     }
 
     public String getGenre() {
