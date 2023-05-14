@@ -16,6 +16,7 @@ jobs:
         id: cpr
         uses: peter-evans/create-pull-request@v5
         with:
+          ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
           token: ${{ secrets.PAT }}
           commit-message: Update report
           committer: GitHub <noreply@github.com>
