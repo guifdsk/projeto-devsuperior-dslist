@@ -13,7 +13,25 @@ jobs:
       with:
         ref: my-branch
         destination_branch: "development"
-        pr_title: "Pulling ${{ github.head.ref }} into development"
+        pr_title: "Pulling ${{ github.repository }} into development by ${{ github.actor }}"
         pr_body: |                                    
           :crown: *An automated PR*
           - Updated with *today's* date
+          ${{ ci }}
+          ${{ github_workflow }}
+          ${{ github_run_id }}
+          ${{ github_run_number }}
+          ${{ github_action }}
+          ${{ github_actions }}
+          ${{ github_actor }}
+          ${{ github_repository }}
+          ${{ github_event_name }}
+          ${{ github_event_path }}
+          ${{ github_workspace }}
+          ${{ github_sha }}
+          ${{ github_ref }}
+          ${{ github_head_ref }}
+          ${{ github_base_ref }}
+          ${{ github_server_url }}
+          ${{ github_api_url }}
+          ${{ github_graphql_url }}
