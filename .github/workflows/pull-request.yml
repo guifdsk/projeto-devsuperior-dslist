@@ -12,8 +12,4 @@ jobs:
       uses: repo-sync/pull-request@v2
       with:
         destination_branch: "development"
-        pr_title: "Pulling ${{ github.ref }} into development"
-        pr_body: |
-          :crown: *An automated PR*
-
-          _Created by [repo-sync/pull-request](https://github.com/repo-sync/pull-request)_
+        pr_title: "Pulling into development"
