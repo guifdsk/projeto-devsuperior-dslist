@@ -27,7 +27,7 @@ public class GameService {
         var result = repository.findAll();
         return result.stream()
                 .map(GameMinDTO::new)
-                .filter(x -> x.getYear() == 2012)
+                .filter(x -> x.getGameYear() == 2012)
                 .toList();
     }
 

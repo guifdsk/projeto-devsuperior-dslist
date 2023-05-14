@@ -14,7 +14,7 @@ public class Game {
     @Column
     private String title;
     @Column(name = "game_year")
-    private Integer year;
+    private Integer gameYear;
     @Column
     private String genre;
     @Column
@@ -32,11 +32,11 @@ public class Game {
 
     }
 
-    public Game(Long id, String title, Integer year, String genre, String platforms, Double score, String imgUrl,
+    public Game(Long id, String title, Integer gameYear, String genre, String platforms, Double score, String imgUrl,
                 String shortDescription, String longDescription) {
         this.id = id;
         this.title = title;
-        this.year = year;
+        this.gameYear = gameYear;
         this.genre = genre;
         this.platforms = platforms;
         this.score = score;
@@ -61,12 +61,12 @@ public class Game {
         this.title = title;
     }
 
-    public Integer getYear() {
-        return year;
+    public Integer getGameYear() {
+        return gameYear;
     }
 
-    public void setYear(Integer year) {
-        this.year = year;
+    public void setGameYear(Integer gameYear) {
+        this.gameYear = gameYear;
     }
 
     public String getGenre() {
@@ -77,12 +77,12 @@ public class Game {
         this.genre = genre;
     }
 
-    public String getPlatform() {
+    public String getPlatforms() {
         return platforms;
     }
 
-    public void setPlatform(String platform) {
-        this.platforms = platform;
+    public void setPlatforms(String platforms) {
+        this.platforms = platforms;
     }
 
     public Double getScore() {
@@ -105,8 +105,8 @@ public class Game {
         return shortDescription;
     }
 
-    public void setShortCutDescription(String shortCutDescription) {
-        this.shortDescription = shortCutDescription;
+    public void setShortDescription(String shortDescription) {
+        this.shortDescription = shortDescription;
     }
 
     public String getLongDescription() {
